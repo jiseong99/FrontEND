@@ -1,0 +1,151 @@
+<!-- html코드의 기본구조 -->
+
+<!DOCTYPE html> <!-- HTML5 버전을 의미 (문서의 버전을 의미) -->
+
+<html lang="ko"> <!-- lang이라는 속성은 html 문서의 주력 언어를 나타내주는 속성 -->
+    <!-- html 태그는 문서의 시작을 의미 -->
+    <!-- 태그의 속성이라는 것은 태그를 의미나 기능적으로 보조해주는 역할 -->
+    <!-- en은 영어, ko는 한국어 -->
+    <head>
+        <!-- head 태그는 html 문서의 정보를 작성하는 영역 -->
+        <!-- charset은 문서의 인코딩을 결정 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- title 태그는 문서의 제목을 결정 -->
+        <title>Document</title>
+        <title>a 태그(링크)</title>
+    </head>
+
+    <!-- body 태그는 웹 브라우저에 표시되는 영역 -->
+    <!-- 사용자에게 실제로 노출되는 영역이 body 태그(웹 브라우저에 표시되는 영역) -->
+    <body>
+        <!-- h(n)태그는 검색 엔진 최적화와도 가장 연관성이 있는 태그임, 헤딩태그라고도 불림 -->
+        <!-- h(n)은 h(1)부터 h(6)까지를 아울러서 부르는 말, h(n)태그가 주로 콘텐츠의 대제목, 중제목, 소제목과 같은 곳에 사용되기 때문 -->
+        <h1>h1 tag</h1>
+        <h2>h2 tag</h2>
+        <h3>h3 tag</h3>
+        <h4>h4 tag</h4>
+        <h5>h5 tag</h5>
+        <h6>h6 tag</h6>
+        <!-- h의 숫자가 커질수록 글자 크기와 굵기가 작아짐 -->
+        <!-- h1태그가 가장 중요한 의미, h6가 가장 덜 중요한 의미를 가지는 태그 -->
+        
+        <!-- h1 태그는 하나의 html 문서에서 한 번만 사용해야함 -->
+        <!-- h(n) 태그는 h1 태그부터 순차적으로 사용해야함 -->
+
+        <!-- p태그는 paragraph(단락)을 쓰는 태그 -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Autem possimus eius veritatis consequatur accusamus, aspernatur dicta, assumenda ea ducimus molestias maiores nesciunt soluta labore enim animi officiis qui officia distinctio?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem possimus eius veritatis consequatur accusamus, aspernatur dicta, assumenda ea ducimus molestias maiores nesciunt soluta labore enim animi officiis qui officia distinctio?</p>
+        <!-- p태그는 연속적으로 사용해주었을 때 단락과 단락 사이가 띄어짐 -->
+        <!-- p태그는 웹 브라우저의 가로 한 줄을 사용하는 태그임 / 공백은 아무리 많이 띄어나도 웹 브라우저 상에서는 한 칸만 띄어짐 (더 띄우고 싶으면 &nbsp;를 사용해야함) -->
+        <!-- html의 Entity 코드인 &nbsp; 하나당 공백 하나를 의미 -->
+        <!-- 엔터로 줄바꿈해도 브라우저에서는 안바뀜, br 태그 사용해야함 -->
+
+        <!-- a태그(anchor) 웹페이지에서 링크를 연결할 때 사용하는 태그 -->
+        <!-- a태그는 내부링크 방법, 외부링크 방법이 있음 -->
+        
+        <!-- 내부링크 -->
+        <a href="#one">one으로 이동</a>
+        <a href="#two">two으로 이동</a>
+        <a href="#three">three으로 이동</a>
+        
+        <p id="one" style="margin-top: 1500px;">one</p>
+        <p id="two" style="margin-top: 1500px;">two</p>
+        <p id="three" style="margin-top: 1500px;">three</p>
+        <p style="margin-top:2000px"></p>
+        <!-- a태그는 기본적으로 한번도 방문한적 없으면 파란색, 한번이라도 이동했으면 보라색 -->
+        <!-- 내부링크는 주로 목차에 많이 사용됨 -->
+         
+        <!-- 외부링크 -->
+        <a href="https://www.google.com" target="_blank">구글로 이동</a>
+        <!-- target 속성은 현재 탭에서가 아니라, 새로운 탭에서 이동됨 -->
+
+        <!-- img 태그는 html 문서에 이미지를 삽입할 때 사용 -->
+        <!-- img 태그는 삽입하려고 하는 이미지의 위치에 따라서 내부 리소스 이미지, 외부 리소스 이미지 방법이 있음 -->
+        <!-- src(source) 속성 활용, 사용하는 이미지의 경로 입력 -->
+        <!-- ./는 현재 위치를 의미 --> 
+        <!-- ../는 상위 폴더를 의미 -->
+        <!-- ../../는 상위 폴더의 상위 폴더를 의미(중첩사용가능) -->
+        <!-- alt(대체) 속성은 이미지가 깨지더라도 설명할 수 있는 글을 쓰는 속성 -->
+        
+        <!-- 내부 리소스 이미지 -->
+        <!-- img 태그는 src와 alt 속성이 필수 -->
+        <!-- width나 height 중 하나만 사용하면 나머지 수치는 비율에 맞춰서 자동 조절 / 둘 다 사용 시 깨질 수 있음 -->
+        <!-- 100과 같이 숫자만 사용할것(알아서 px로 인식), %값으로 사용 가능 --> 
+        <img src="./image/sampleimg.jpg" alt="강유성" width="100" height="100">
+        
+        <!-- 외부 리소스 이미지 -->
+        <img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+        <!-- img태그를 a태그로 감싸게 되면 img 클릭시 google 사이트로 이동할 수 있게됨 / _blank 써서 새로운 탭에서 열리게함 -->
+        <a href="https://google.com" target="_blank">
+            <img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        </a>
+
+
+        <!-- html에서 텍스트의 중요도나 강조를 표현하고 싶을때 strong이나 em 태그를 사용함-->
+        
+        <!-- strong 태그는 중요한 텍스트(important text), 볼드체(bold)-->
+        <p><strong>중요:</strong> 기계적 결함이 아닌
+            사용자 부주의로 발생한 사고에 대해서는 책임지지 않습니다.</p>
+        
+        <!-- em 태그는 강조 텍스트(empahsis text), 기울어진 글꼴-->
+        <p>이 놀이기누는 <em> 임산부, 어린이, 노약자</em>는 탑승할 수 없습니다.</p>
+
+        <!-- strong과 em 태그는 중첩해서 사용가능-->
+        <p><strong>중요하면서<em>강조</em></strong></p>
+        
+        <p><em>강조하면서도 <strong>중요한 텍스트</strong></em></p>
+        
+        <p><strong>중요한 텍스트인데
+            <strong>이건 더 중요한 텍스트</strong></strong></p>
+        
+        <p><em>강조하고 싶은 텍스트인데
+            <em>이건 더 강조하고 싶은 텍스트</em></em></p>
+
+        
+        <!-- b태그와 i태그-->
+        <p><strong>중요:</strong> 기계적 결함이 아닌
+            사용자 부주의로 발생한 사고에 대해서는 책임지지 않습니다.</p>
+        <p><b>중요:</b> 기계적 결함이 아닌
+            사용자 부주의로 발생한 사고에 대해서는 책임지지 않습니다.</p>
+        
+        <p>이 놀이기누는 <em> 임산부, 어린이, 노약자</em>는 탑승할 수 없습니다.</p>
+        <p>이 놀이기누는 <i> 임산부, 어린이, 노약자</i>는 탑승할 수 없습니다.</p>
+
+        <!--b태그와 strong태그/ i태그와 em 태그는 동일하게 웹페이지에서 나타나나 의미와 시각적인 측면에서 다른거임-->
+    
+
+
+        <!-- ul, ol, dl 태그는 목록을 표현하기 위한 태그-->
+        
+        <!-- ul  태그는(unordered list) 비순서형 목록 태그-->
+        <ul>
+            <li>고양이 목욕 시키기</li>
+            <li>숙제하기</li>
+            <li>운동하기</li>
+        </ul>
+
+
+        <!-- ol  태그는(ordered list) 순서형 목록 태그-->
+        <!-- ol 태그는 type 속성에 따라서 1,2,3 / A,B,C 등 목록앞에 순서값 속성을 할당할 수 있음-->
+        <ol type="1">
+            <li>고양이 목욕 시키기</li>
+            <li>숙제하기</li>
+            <li>운동하기</li>
+        </ol>
+    
+        <!-- dl  태그는(definition list) 정의형 목록 태그-->
+        <!-- dl  태그는 하위 자식 태그로 dt, dd 태그를 가질 수 있음-->
+        <!-- dt 태그는(definition title) 용어의 정의/ dd 태그는(definition data) 용어의 설명-->
+        <dl>
+            <dt>라자냐</dt>
+            <dd>라자냐는 이탈리아 북부에서 유래한 파스타의 일종임</dd>
+            <dt>필라프</dt>
+            <dd>필라프는 쌀이나 으깬 밀과 같은 곡식으로 만드는 음식임</dd>
+            <dt>아란치니</dt>
+            <dd>아란치니는 맛있음</dd>
+            
+        </dl>        
+    </body>
+</html>
